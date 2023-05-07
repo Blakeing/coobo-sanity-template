@@ -8,6 +8,12 @@ const config = {
     remotePatterns: [
       { hostname: 'cdn.sanity.io' },
       { hostname: 'source.unsplash.com' },
+      {
+        hostname: 'images.unsplash.com',
+      },
+      {
+        hostname: 'tailwindui.com',
+      },
     ],
   },
   typescript: {

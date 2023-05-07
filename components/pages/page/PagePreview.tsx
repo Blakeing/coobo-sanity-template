@@ -1,10 +1,9 @@
 'use client'
 
+import { Page } from './Page'
 import { usePreview } from 'lib/sanity.preview'
 import { pagesBySlugQuery } from 'lib/sanity.queries'
 import type { PagePayload } from 'types'
-
-import { Page } from './Page'
 
 export function PagePreview({
   token,

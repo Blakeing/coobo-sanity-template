@@ -1,40 +1,16 @@
-import { HomePage } from 'components/pages/home/HomePage'
-import { HomePagePreview } from 'components/pages/home/HomePagePreview'
-import { PreviewSuspense } from 'components/preview/PreviewSuspense'
-import { PreviewWrapper } from 'components/preview/PreviewWrapper'
-import { getHomePage } from 'lib/sanity.client'
-import { getPreviewToken } from 'lib/sanity.server.preview'
-import { notFound } from 'next/navigation'
+import Header from '@/components/header'
+import HomeSlider from '@/components/home-slider'
+import { SiteHeader } from '@/components/site-header'
+import { buttonVariants } from '@/components/ui/button'
+import { siteConfig } from '@/config/site'
+import Link from 'next/link'
 
-export default async function IndexRoute() {
-  const token = getPreviewToken()
-  const data = (await getHomePage({ token })) || {
-    title: '',
-    overview: [],
-    showcaseProjects: [],
-  }
-
-  if (!data && !token) {
-    notFound()
-  }
-
+export default function HomePage() {
   return (
-    <>
-      {token ? (
-        <>
-          <PreviewSuspense
-            fallback={
-              <PreviewWrapper>
-                <HomePage data={data} />
-              </PreviewWrapper>
-            }
-          >
-            <HomePagePreview token={token} />
-          </PreviewSuspense>
-        </>
-      ) : (
-        <HomePage data={data} />
-      )}
-    </>
+    <main>
+      {/* <SiteHeader position="fixed" /> */}
+      <Header position="fixed" />
+      <HomeSlider />
+    </main>
   )
 }

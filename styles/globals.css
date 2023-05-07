@@ -120,7 +120,7 @@
     @apply text-sm font-medium leading-none;
   }
   .body blockquote {
-    @apply border-accent-300 text-accent-800 mt-6 border-l-2 pl-6 italic;
+    @apply mt-6 border-l-2 border-accent-300 pl-6 italic text-accent-800;
   }
 }
 

@@ -1,5 +1,3 @@
-
-
 import type { PortableTextBlock } from '@portabletext/types'
 import { Footer } from 'components/global/Footer'
 import { Navbar } from 'components/global/Navbar'
