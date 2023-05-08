@@ -20,7 +20,7 @@ export function TeamListItem(props: TeamMemberProps) {
           alt=""
         />
       </Link>
-      <h3 className=" text-lg font-semibold leading-8 tracking-tight text-accent-900">
+      <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-accent-900">
         {teamMember.memberName}
       </h3>
       <p className="text-base leading-7 text-accent-600">{teamMember.role}</p>

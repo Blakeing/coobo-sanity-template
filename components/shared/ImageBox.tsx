@@ -43,8 +43,9 @@ export default function ImageBox({
         <Image
           className={imageClasses}
           alt={alt}
-          width={width}
-          height={height}
+          fill
+          // width={width}
+          // height={height}
           sizes={size}
           src={imageUrl}
         />

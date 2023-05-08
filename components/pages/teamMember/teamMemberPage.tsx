@@ -24,8 +24,8 @@ export function TeamMemberPage({ data }: { data: TeamMember }) {
             <ImageBox
               image={imageUrl}
               alt={`Cover image for ${memberName}`}
-              wrapperClasses="relative aspect-[1/1]"
-              imageClasses="h-24 w-24 object-cover rounded-full ring-4 ring-white sm:h-32 sm:w-32"
+              wrapperClasses="relative h-24 w-24 sm:h-32 sm:w-32 "
+              imageClasses=" object-cover rounded-full ring-4 ring-white "
             />
           </div>
           <div className="mt-6 sm:flex sm:min-w-0 sm:flex-1 sm:items-center sm:justify-end sm:space-x-6 sm:pb-1">
