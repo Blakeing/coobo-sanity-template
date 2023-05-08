@@ -1,4 +1,3 @@
-import { Toaster } from '@/components/ui/toaster'
 import '@/styles/globals.css'
 import { IBM_Plex_Mono, Inter, PT_Serif } from 'next/font/google'
 

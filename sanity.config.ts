@@ -2,6 +2,8 @@
  * This config is used to set up Sanity Studio that's mounted on the `/pages/studio/[[...index]].tsx` route
  */
 
+import teamMember from './schemas/documents/teamMember'
+import ourTeam from './schemas/singletons/ourTeam'
 import { visionTool } from '@sanity/vision'
 import { apiVersion, dataset, previewSecretId, projectId } from 'lib/sanity.api'
 import { previewDocumentNode } from 'plugins/previewPane'
@@ -26,6 +28,8 @@ export const PREVIEWABLE_DOCUMENT_TYPES: string[] = [
   home.name,
   page.name,
   project.name,
+  ourTeam.name,
+  teamMember.name,
 ]
 
 export default defineConfig({
@@ -39,7 +43,9 @@ export default defineConfig({
       // Singletons
       home,
       settings,
+      ourTeam,
       // Documents
+      teamMember,
       duration,
       page,
       project,
@@ -50,12 +56,12 @@ export default defineConfig({
   },
   plugins: [
     deskTool({
-      structure: pageStructure([home, settings]),
+      structure: pageStructure([home, settings, ourTeam]),
       // `defaultDocumentNode` is responsible for adding a “Preview” tab to the document pane
       defaultDocumentNode: previewDocumentNode({ apiVersion, previewSecretId }),
     }),
     // Configures the global "new document" button, and document actions, to suit the Settings document singleton
-    singletonPlugin([home.name, settings.name]),
+    singletonPlugin([home.name, settings.name, ourTeam.name]),
     // Add the "Open preview" action
     productionUrl({
       apiVersion,

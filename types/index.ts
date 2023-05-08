@@ -1,4 +1,5 @@
 import type { PortableTextBlock } from '@portabletext/types'
+import sr from 'date-fns/locale/sr'
 import type { Image } from 'sanity'
 
 export interface MenuItem {
@@ -27,12 +28,29 @@ export interface ShowcaseProject {
   title?: string
 }
 
+export interface TeamMember {
+  _type: string
+  imageUrl?: Image
+  role?: string
+  twitterUrl?: string
+  linkedinUrl?: string
+  slug?: string
+  memberName?: string
+}
+
 // Page payloads
 
 export interface HomePagePayload {
   footer?: PortableTextBlock[]
   overview?: PortableTextBlock[]
   showcaseProjects?: ShowcaseProject[]
+  title?: string
+}
+
+export interface OurTeamPagePayload {
+  footer?: PortableTextBlock[]
+  overview?: PortableTextBlock[]
+  teamMembers?: TeamMember[]
   title?: string
 }
 

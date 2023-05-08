@@ -32,7 +32,7 @@ export function ProjectPage({ data }: { data: ProjectPayload }) {
           <ImageBox
             image={coverImage}
             alt={`Cover image for ${title}`}
-            classesWrapper="relative aspect-[16/9]"
+            wrapperClasses="relative aspect-[16/9]"
           />
 
           <div className="grid grid-cols-1 divide-y divide-inherit lg:grid-cols-4 lg:divide-x lg:divide-y-0">

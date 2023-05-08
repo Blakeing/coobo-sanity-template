@@ -2,18 +2,34 @@ import { groq } from 'next-sanity'
 
 export const homePageQuery = groq`
   *[_type == "home"][0]{
-    _id, 
+    _id,
     footer,
-    overview, 
+    overview,
     showcaseProjects[]->{
       _type,
-      coverImage, 
-      overview, 
+      coverImage,
+      overview,
       "slug": slug.current,
-      tags, 
-      title, 
-    }, 
-    title, 
+      tags,
+      title,
+    },
+    title,
+  }
+`
+
+export const ourTeamPageQuery = groq`
+  *[_type == "ourTeam"][0]{
+    _id,
+    teamMembers[]->{
+      _type,
+      imageUrl,
+      role,
+      "slug": slug.current,
+    linkedinUrl,
+    twitterUrl,
+    memberName,
+    },
+    title,
   }
 `
 
@@ -34,15 +50,28 @@ export const pagesBySlugQuery = groq`
 export const projectBySlugQuery = groq`
   *[_type == "project" && slug.current == $slug][0] {
     _id,
-    client, 
+    client,
     coverImage,
     description,
-    duration, 
+    duration,
     overview,
-    site, 
+    site,
     "slug": slug.current,
     tags,
     title,
+  }
+`
+
+export const teamMemberBySlugQuery = groq`
+  *[_type == "teamMember" && slug.current == $slug][0] {
+    _id,
+  imageUrl,
+  role,
+  twitterUrl,
+  linkedinUrl,
+  memberName,
+  "slug": slug.current,
+
   }
 `
 
