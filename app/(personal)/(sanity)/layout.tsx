@@ -1,3 +1,4 @@
+import Header from '@/components/header'
 import type { PortableTextBlock } from '@portabletext/types'
 import { Footer } from 'components/global/Footer'
 import { Navbar } from 'components/global/Navbar'
@@ -13,17 +14,26 @@ export default async function IndexRoute({
   children: React.ReactNode
 }) {
   const token = getPreviewToken()
-  const settings = (await getSettings({ token })) || {
-    menuItems: [],
-    footer: [],
-  }
+  // const settings = (await getSettings({ token })) || {
+  //   menuItems: [],
+  //   footer: [],
+  // }
 
   return (
+    // <>
+    //   {token && <PreviewBanner />}
+    //   <main>
+    //     {/* <Header position="sticky" /> */}
+
+    //     {children}
+    //   </main>
+    // </>
     <div className="flex min-h-screen flex-col bg-white text-black">
       {token && <PreviewBanner />}
-      <Navbar menuItems={settings.menuItems} />
+      <Header position="sticky" />
+      {/* <Navbar menuItems={settings.menuItems} /> */}
       <div className="mt-20 grow px-4 md:px-16 lg:px-32">{children}</div>
-      <Footer footer={settings.footer as PortableTextBlock[]} />
+      {/* <Footer footer={settings.footer as PortableTextBlock[]} /> */}
     </div>
   )
 }
