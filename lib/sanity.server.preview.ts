@@ -1,5 +1,5 @@
-import { draftMode } from 'next/headers'
+import { previewData } from 'next/headers'
 
 export function getPreviewToken(): string | null | undefined {
-  return (draftMode() as { token?: string | null })?.token
+  return (previewData() as { token?: string | null })?.token
 }
