@@ -5,6 +5,8 @@ import { PreviewBanner } from 'components/preview/PreviewBanner'
 import { getSettings } from 'lib/sanity.client'
 import { getPreviewToken } from 'lib/sanity.server.preview'
 
+export const revalidate = 5 // revalidate this page every 60 seconds
+
 export default async function IndexRoute({
   children,
 }: {
