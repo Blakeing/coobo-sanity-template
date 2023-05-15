@@ -36,8 +36,8 @@ export const siteConfig: SiteConfig = {
       slug: '/contact',
     },
     {
-      title: 'Sanity',
-      slug: '/sanity',
+      title: 'Studio',
+      slug: '/studio',
     },
   ],
   links: {
