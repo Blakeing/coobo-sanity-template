@@ -12,7 +12,7 @@ export function OurTeamPage({ data }: { data: OurTeamPagePayload }) {
   const { teamMembers } = data
 
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white ">
       <div className="container mx-auto">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-accent-900 sm:text-4xl">

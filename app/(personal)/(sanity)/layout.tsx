@@ -32,7 +32,7 @@ export default async function IndexRoute({
       {token && <PreviewBanner />}
       <Header position="sticky" />
       {/* <Navbar menuItems={settings.menuItems} /> */}
-      <div className="mt-20 grow px-4 md:px-16 lg:px-32">{children}</div>
+      <div className="my-20 grow px-4 md:px-16 lg:px-32">{children}</div>
       {/* <Footer footer={settings.footer as PortableTextBlock[]} /> */}
     </div>
   )
