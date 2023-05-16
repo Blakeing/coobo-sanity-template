@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function NotFound() {
   return (
     <>
-      <Header position="sticky" />
+      {/* <Header position="fixed" /> */}
       <main className="container mx-auto flex w-full flex-auto flex-col justify-center  py-24 sm:py-64 ">
         <p className="text-base font-semibold leading-8 text-accent-600">404</p>
         <h1 className="mt-4 text-3xl font-bold tracking-tight text-accent-900 sm:text-5xl">
@@ -14,12 +14,12 @@ export default function NotFound() {
           Sorry, we couldn’t find the page you’re looking for.
         </p>
         <div className="mt-10">
-          <Link
+          <a
             href="/"
             className="text-sm font-semibold leading-7 text-accent-600"
           >
             <span aria-hidden="true">&larr;</span> Back to home
-          </Link>
+          </a>
         </div>
       </main>
     </>

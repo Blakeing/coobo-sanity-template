@@ -10,14 +10,13 @@ import type { OurTeamPagePayload } from 'types'
 export function OurTeamPage({ data }: { data: OurTeamPagePayload }) {
   // Default to an empty object to allow previews on non-existent documents
   const { teamMembers } = data
-  console.log('teamMembers', teamMembers)
 
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="container mx-auto">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-accent-900 sm:text-4xl">
-            Our team
+            Our Team
           </h2>
           <p className="mt-6 text-lg leading-8 text-accent-600">
             We’re a dynamic group of individuals who are passionate about what

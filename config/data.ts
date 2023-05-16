@@ -56,7 +56,7 @@ export const engagement = [
   {
     id: '3',
     title:
-      'Eget velit aliquet sagittis id consectetur. Vitae semper quis lectus nulla at volutpat diam ut.',
+      'Eget velit aliquet sagittis id consectetur.',
     name: 'Press',
     href: '#',
     icon: NewspaperIcon,
