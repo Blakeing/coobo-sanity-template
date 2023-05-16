@@ -14,8 +14,8 @@ export function TeamListItem(props: TeamMemberProps) {
     <li>
       <Link href={href}>
         <ImageBox
-          wrapperClasses="relative aspect-[3/2] w-full"
-          imageClasses="rounded-2xl object-cover"
+          wrapperClasses="relative aspect-[1/1]  w-full"
+          imageClasses="rounded-2xl object-cover object-center"
           image={teamMember.imageUrl}
           alt=""
         />
